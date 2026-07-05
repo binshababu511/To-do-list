@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Todo List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <div class="todo-container">
+      <div class="top-bar">
+        <div>
+          <h1>Task Trackers</h1>
+          
+        </div>
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+      </div>
+
+      <div class="todo-form">
+        <input type="text" id="taskInput" placeholder="Enter task..." />
+        <input type="datetime-local" id="taskDate" />
+        <select id="taskPriority">
+          <option value="Low">Low Priority</option>
+          <option value="Medium">Medium Priority</option>
+          <option value="High">High Priority</option>
+        </select>
+        <button id="addBtn">Add Task</button>
+      </div>
+
+      <div class="toolbar">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="pending">Pending</button>
+          <button class="filter-btn" data-filter="completed">Completed</button>
+        </div>
+        <button id="clearCompleted" class="warning-btn">Clear Completed</button>
+      </div>
+
+      <ul id="taskList"></ul>
+
+      <div class="bottom-bar">
+        <p id="taskCount">0 tasks</p>
+      </div>
+
+      <div class="alarm-controls">
+        <button id="stopAlarm" class="warning-btn">Stop Alarm</button>
+      </div>
+    </div>
+  </div>
+
+  <audio id="alarmSound" preload="auto">
+    <source src="alarm.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
